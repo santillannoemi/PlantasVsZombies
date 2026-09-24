@@ -19,8 +19,9 @@ public class Character : MonoBehaviour
     }
     private IEnumerator DieCoroutine()
     {
-        characterAnimator.Play("Die", 0, 0f);
+        characterAnimator.Play("Death", 0, 0f);
         yield return characterAnimator.WaitForCurrentAnimation();
         gameObject.SetActive(false);
     }
-}
+} 
+

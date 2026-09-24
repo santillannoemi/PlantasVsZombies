@@ -10,29 +10,29 @@ public class Health : MonoBehaviour
     private UnityEvent onDeath;
     [SerializeField]
     private UnityEvent onTakeDamage;
-    private float currentHealth;
+    private float CurrentHealth;
     private float maxHealth;
-    public bool IsDead => currentHealth <= 0;
+    public bool IsDead => CurrentHealth <= 0;
     public void SetMaxHealth(float health)
     {
         maxHealth = health;
     }
     public void Initialize()
     {
-        currentHealth = maxHealth;
+        CurrentHealth = maxHealth;
         UpdateHealthSlider();
     }
     private void UpdateHealthSlider()
     {
-        healthSlider.value = currentHealth / maxHealth;
+        healthSlider.value = CurrentHealth / maxHealth;
     }
     public void TakeDamage(float damage)
     {
-        currentHealth -= damage;
+        CurrentHealth -= damage;
         onTakeDamage?.Invoke();
-        if (currentHealth <= 0)
+        if (CurrentHealth <= 0)
         {
-            currentHealth = 0;
+            CurrentHealth = 0;
             onDeath?.Invoke();
         }
         UpdateHealthSlider();

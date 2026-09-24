@@ -8,7 +8,7 @@ public class DetectTarget : MonoBehaviour
     [SerializeField]
     private float rayHeightOffset = 0.5f;
     private bool IsActive;
-    private System.Action<Transform> onTargetDetected;
+    public  event System.Action<Health> OnTargetDetected;
     public void SetRange(float newRange)
     {
         range = newRange;
@@ -24,7 +24,7 @@ public class DetectTarget : MonoBehaviour
         {
             if (hit.collider.CompareTag(targetTag))
             {
-                onTargetDetected?.Invoke(hit.transform);
+                OnTargetDetected?.Invoke(hit.collider.GetComponent<Health>());
             }
         }
     }
