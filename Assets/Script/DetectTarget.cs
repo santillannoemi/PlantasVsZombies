@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
  
 public class DetectTarget : MonoBehaviour
@@ -8,7 +9,7 @@ public class DetectTarget : MonoBehaviour
     [SerializeField]
     private float rayHeightOffset = 0.5f;
     private bool IsActive;
-    public  event System.Action<Health> OnTargetDetected;
+    public System.Action<Health> OnTargetDetected;
     public void SetRange(float newRange)
     {
         range = newRange;
@@ -34,3 +35,4 @@ public class DetectTarget : MonoBehaviour
         Gizmos.DrawRay(transform.position + Vector3.up * rayHeightOffset, transform.forward * range);
     }
 }
+ 
