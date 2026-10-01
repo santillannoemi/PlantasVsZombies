@@ -1,6 +1,6 @@
 using UnityEngine;
 using System.Collections;
-
+ 
 public class Peashooter : Character
 {
     [SerializeField]
@@ -10,6 +10,7 @@ public class Peashooter : Character
     private Health currentTarget;
     private DetectTarget detectTarget;
     private bool canAttack;
+ 
     protected override void Awake()
     {
         base.Awake();
@@ -22,14 +23,14 @@ public class Peashooter : Character
         health.Initialize();
         currentTarget = null;
         canAttack = true;
-        ActivateTargetDetection(true);
+        ActiveTargetDetection(true);
     }
-    private void ActivateTargetDetection(bool IsActive)
+    private void ActiveTargetDetection(bool IsActive)
     {
         detectTarget.SetActive(IsActive);
         if (IsActive)
         {
-            detectTarget.OnTargetDetected += OnTargetDetected; 
+            detectTarget.OnTargetDetected += OnTargetDetected;
         }
         else
         {
@@ -43,8 +44,8 @@ public class Peashooter : Character
     }
     private void Update()
     {
-        if (health.IsDead) return;
-        if (currentTarget != null && canAttack)
+        if(health.IsDead) return;
+        if(currentTarget != null && canAttack)
         {
             Attack();
         }

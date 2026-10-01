@@ -1,5 +1,5 @@
 using UnityEngine;
-
+ 
 public class Bullet : MonoBehaviour
 {
     [SerializeField]
@@ -12,8 +12,12 @@ public class Bullet : MonoBehaviour
     private string hitSound;
     private Rigidbody rb;
     private float damage;
-    public float Damage { set { damage = value; } }
+    public float Damage { set { damage = value;}}
     private void Awake()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+    private void OnEnable()
     {
         rb.linearVelocity = transform.forward * speed;
     }
@@ -21,7 +25,7 @@ public class Bullet : MonoBehaviour
     {
         if (other.CompareTag(enemyTag))
         {
-            if(other.TryGetComponent<Health>(out Health health))
+            if (other.TryGetComponent<Health>(out Health health))
             {
                 health.TakeDamage(damage);
                 PoolManager.Instance.GetObject(hitParticles, transform.position);
@@ -30,5 +34,5 @@ public class Bullet : MonoBehaviour
             }
         }
     }
-     
 }
+ 
