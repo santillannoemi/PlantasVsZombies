@@ -129,7 +129,7 @@ MonoBehaviour:
   speed: 50
   enemyTag: Zombie
   hitParticles: {fileID: 2863395215441293292, guid: a786e556b5b74924d8175e8aae4bca94, type: 3}
-  hitSound: 
+  hitSound: bonk
 --- !u!54 &1265232267103491946
 Rigidbody:
   m_ObjectHideFlags: 0

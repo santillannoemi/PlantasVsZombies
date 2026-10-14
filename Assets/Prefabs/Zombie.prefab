@@ -87,6 +87,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DetectTarget
   targetTag: Plant
   rayHeightOffset: 0.5
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &5154471168384479187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100,6 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Zombie
   characterAnimator: {fileID: 3055599207112913191}
+  initialRotationY: 270
   zombieData: {fileID: 11400000, guid: 04adcc81df013d444bdfccf33a826349, type: 2}
 --- !u!65 &7348815478994687378
 BoxCollider:
