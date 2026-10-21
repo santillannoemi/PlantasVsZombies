@@ -16,7 +16,7 @@ MonoBehaviour:
   appearSound: Sunflower_appear
   deathSound: sunflower_death
   maxHealth: 0
-  sunPrefab: {fileID: 0}
+  sunPrefab: {fileID: 1265859312425926803, guid: 94ad4481f8515744780a899c55a3daa4, type: 3}
   sunOffsetY: 2
   sunInterval: 5
   sunAmount: 1
