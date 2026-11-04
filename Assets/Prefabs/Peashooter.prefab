@@ -199,6 +199,7 @@ GameObject:
   - component: {fileID: 3137606415827470945}
   - component: {fileID: 4811218470549652214}
   - component: {fileID: 3653244957860809691}
+  - component: {fileID: 7090904464863003921}
   m_Layer: 7
   m_Name: Peashooter
   m_TagString: Plant
@@ -214,7 +215,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2178439595601693186}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 19.56, y: 2.79, z: 67.17}
   m_LocalScale: {x: 1.8397, y: 1.8397, z: 1.8397}
   m_ConstrainProportionsScale: 0
@@ -223,7 +224,7 @@ Transform:
   - {fileID: 5327545430484380327}
   - {fileID: 5620962615436218585}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &6230757610954438110
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -289,7 +290,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Peashooter
   characterAnimator: {fileID: 4476781876347459532}
-  initialRotationY: 90
+  initialRotationY: 270
+  blinkDuration: 3
+  price: 2
   shooterPlantData: {fileID: 11400000, guid: 4cf4990744ec31842adc6083173cab95, type: 2}
   shootPivot: {fileID: 5620962615436218585}
 --- !u!114 &3653244957860809691
@@ -309,6 +312,19 @@ MonoBehaviour:
   targetLayer:
     serializedVersion: 2
     m_Bits: 256
+--- !u!114 &7090904464863003921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2178439595601693186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a01b224773270d044907dd7c84fc2bf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Blink
+  blinkInterval: 0.2
 --- !u!1 &2368948116561888492
 GameObject:
   m_ObjectHideFlags: 0
