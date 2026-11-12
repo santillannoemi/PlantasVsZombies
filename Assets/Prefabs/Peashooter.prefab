@@ -244,8 +244,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 2.4141085, z: 1}
-  m_Center: {x: 0, y: 0.7070544, z: 0}
+  m_Size: {x: 1.4764104, y: 2.9022605, z: 1}
+  m_Center: {x: 0.013308, y: 0.95113033, z: 0}
 --- !u!114 &3137606415827470945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,7 +292,7 @@ MonoBehaviour:
   characterAnimator: {fileID: 4476781876347459532}
   initialRotationY: 270
   blinkDuration: 3
-  price: 2
+  price: 0
   shooterPlantData: {fileID: 11400000, guid: 4cf4990744ec31842adc6083173cab95, type: 2}
   shootPivot: {fileID: 5620962615436218585}
 --- !u!114 &3653244957860809691
