@@ -14,6 +14,9 @@ public class PlantCard : MonoBehaviour, IPointerDownHandler
     private SunManager sunManager;
     [SerializeField]
     private UnityEvent<Transform> onPlantBought;
+    [SerializeField]
+    private PlantCardType plantCardType;
+    public PlantCardType PlantCardType => plantCardType;
     private void Awake()
     {
         priceText.text = price.ToString();
@@ -31,6 +34,13 @@ public class PlantCard : MonoBehaviour, IPointerDownHandler
     {
         TryToBuyPlant();
     }
+}
+public enum PlantCardType
+{
+    Peashooter,
+    Flower,
+    Wallnut,
+    PlasmaPeashooter
 }
  
  
